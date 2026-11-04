@@ -8,6 +8,25 @@ export const site = {
   tagline: "[Your one-line tagline]",
   description: "[One or two sentences describing who you are and what you build]",
   email: "[your.email@example.com]",
+  // Vercel sets this env var on deploy; locally the site runs on localhost.
+  url: process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000",
+  initials: "KS",
+};
+
+// For places CSS variables can't reach: the generated favicon and share image, and the
+// browser's theme-color. Keep these in sync with the tokens in globals.css.
+export const themeColors = {
+  light: { bg: "#f5f1ea", text: "#1a1816", muted: "#6b635a", border: "#d9d1c2", accent: "#a44224" },
+  dark: { bg: "#090e1a" },
+};
+
+export const notFound = {
+  code: "404",
+  title: "Page not found",
+  message: "This page doesn't exist, or it has moved.",
+  homeLabel: "Back to the homepage",
 };
 
 export type Social = {

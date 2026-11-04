@@ -4,9 +4,9 @@ import { SiGithub } from "react-icons/si";
 
 export const site = {
   name: "Kenneth Sonoda",
-  role: "IT Student, Web Developer, Software Engineer to be",
-  tagline: "Providing solutions to problems through technology and perseverance",
-  description: "I am an IT student at King's Own Institute, taking a BS in Information Technology, I am currently learning about web development and software engineering, and I am looking for a job opportunity in 2026 - 2027.",
+  role: "Aspring Software Engineer & Web Developer",
+  tagline: "I build web apps that solve real problems for international students in Australia",
+  description: "IT student in Sydney building web apps with React and Tailwind CSS. Opent to graduate / junior web roles from 2026 - 2027.",
   email: "kensonoda1124@gmail.com",
   // Vercel sets this env var on deploy; locally the site runs on localhost.
   url: process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -56,15 +56,15 @@ export const hero = {
 export const about = {
   // The first paragraph is shown larger as an intro; the rest render as body text.
   bio: [
-    "I am an IT student at King's Own Institute, taking a BS in Information Technology, I am currently learning about web development and software engineering, and I am currently working on a project that tailors to the problem of international students.",
-    "I am a quick learner and I am always looking for new challenges and opportunities to grow, I am also a team player and I am always looking for ways to help my team succeed.",
-    "I am always willing to do a job that nobody else wants to do, and I am always looking for ways to improve myself and my skills.",
+    "I am an IT student at King's Own Institute in Sydney, studying BS in Information Technology with a focus on web development and software engineering.",
+    "I built HourMate AU and Gaku Registre to help international students in Australia manage their time and schedule their studies effectively.",
+    "I'm open to graduate / junior web roles from 2026 - 2027",
   ],
   facts: [
     { label: "Based in", value: "Sydney, Australia" },
     { label: "Studying", value: "BS in Information Technology, King's Own Institute" },
     { label: "Focus", value: "Web development and software engineering" },
-    { label: "Currently", value: "Working on a project that tailors to the problem of international students" },
+    { label: "Currently", value: "Building tools for international students in Australia" },
   ],
 };
 
@@ -88,7 +88,7 @@ export const projectLinks = {
 };
 
 export const contact = {
-  intro: "I am willing to work on any project that is related to web development and software engineering, and I am always looking for new challenges and opportunities to grow, feel free to contact me if you have any questions or opportunities.",
+  intro: "I'm looking for graduate / junior web roles from 2026 - 2027, feel free to contact me if you have any questions or opportunities.",
   emailLabel: "Email",
   elsewhereLabel: "Elsewhere",
 };

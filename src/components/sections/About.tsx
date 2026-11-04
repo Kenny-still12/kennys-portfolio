@@ -27,7 +27,7 @@ export function About() {
             height={500}
             quality={90}
             sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, 50vw"
-            className="aspect-[4/5] w-1/2 rounded-card border border-border object-cover md:w-full"
+            className="aspect-[4/5] w-1/2 rounded-card border border-border object-cover object-[80%_center] md:w-full"
           />
           <dl className="mt-8 divide-y divide-border border-y border-border">
             {about.facts.map((fact) => (

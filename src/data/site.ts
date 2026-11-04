@@ -4,9 +4,9 @@ import { SiGithub } from "react-icons/si";
 
 export const site = {
   name: "Kenneth Sonoda",
-  role: "Aspring Software Engineer & Web Developer",
+  role: "Aspiring Software Engineer & Web Developer",
   tagline: "I build web apps that solve real problems for international students in Australia",
-  description: "IT student in Sydney building web apps with React and Tailwind CSS. Opent to graduate / junior web roles from 2026 - 2027.",
+  description: "IT student in Sydney building web apps with React and Tailwind CSS. Open to graduate / junior web roles from 2026 - 2027.",
   email: "kensonoda1124@gmail.com",
   // Vercel sets this env var on deploy; locally the site runs on localhost.
   url: process.env.VERCEL_PROJECT_PRODUCTION_URL

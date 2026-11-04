@@ -119,7 +119,7 @@ export function Hero() {
               preload
               quality={90}
               sizes="(min-width: 768px) 30vw, 66vw"
-              className="aspect-[4/5] w-full animate-fade rounded-card border border-border object-cover"
+              className="aspect-[4/5] w-full animate-fade rounded-card border border-border object-cover object-[80%_center]"
               style={delay(AFTER_NAME_MS + 100)}
             />
           </div>

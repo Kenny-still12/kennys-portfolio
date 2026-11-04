@@ -1,9 +1,26 @@
+import type { IconType } from "react-icons";
+import { FaLinkedin } from "react-icons/fa6";
+import { SiGithub } from "react-icons/si";
+
 export const site = {
   name: "Kenneth Sonoda",
   role: "[Your role, e.g. IT student focused on web development and design]",
   tagline: "[Your one-line tagline]",
   description: "[One or two sentences describing who you are and what you build]",
+  email: "[your.email@example.com]",
 };
+
+export type Social = {
+  label: string;
+  href: string;
+  icon: IconType;
+};
+
+export const socials: Social[] = [
+  { label: "GitHub", href: "https://github.com/Kenny-still12", icon: SiGithub },
+  // LinkedIn's logo isn't in Simple Icons, so it comes from the Font Awesome set.
+  { label: "LinkedIn", href: "[Your LinkedIn URL]", icon: FaLinkedin },
+];
 
 export const PROFILE_IMAGE = "/images/profile-placeholder.svg";
 export const PROFILE_IMAGE_ALT = "Portrait of Kenneth Sonoda";
@@ -44,4 +61,15 @@ export type SectionId = (typeof sections)[number]["id"];
 
 export const footer = {
   backToTop: "Back to top",
+};
+
+export const projectLinks = {
+  live: "Live site",
+  repo: "Source",
+};
+
+export const contact = {
+  intro: "[A sentence or two on what you'd like to hear about, e.g. internships, collaborations, or just a hello.]",
+  emailLabel: "Email",
+  elsewhereLabel: "Elsewhere",
 };

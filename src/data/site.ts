@@ -41,7 +41,7 @@ export const socials: Social[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kenneth-sonoda-010187365/", icon: FaLinkedin },
 ];
 
-export const PROFILE_IMAGE = "/images/profile-placeholder.svg";
+export const PROFILE_IMAGE = "/images/Profile_Professional.jpg";
 export const PROFILE_IMAGE_ALT = "Portrait of Kenneth Sonoda";
 
 // Uses the profile photo until you add a second one, e.g. "/images/about.jpg".

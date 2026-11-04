@@ -17,6 +17,8 @@ export function Contact() {
             <p className="mt-12 font-mono text-xs text-muted">{contact.emailLabel}</p>
             <a
               href={`mailto:${site.email}`}
+              // Chrome reads the <wbr> below as a space, so give screen readers the address in one piece.
+              aria-label={site.email}
               className="mt-3 inline-block text-title underline decoration-border decoration-2 underline-offset-8 transition-colors duration-200 [overflow-wrap:anywhere] hover:text-accent hover:decoration-accent"
             >
               {/* On narrow screens, wrap after the @ rather than mid-word. */}

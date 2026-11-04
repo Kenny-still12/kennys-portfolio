@@ -30,7 +30,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={label}
-      className="inline-flex size-10 items-center justify-center rounded-full border border-border text-text transition-colors duration-200 hover:border-accent hover:text-accent"
+      className="inline-flex size-10 items-center justify-center rounded-card border border-border text-text transition-colors duration-200 hover:border-accent hover:text-accent"
     >
       {mounted && (
         <AnimatePresence mode="wait" initial={false}>

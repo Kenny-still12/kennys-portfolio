@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import type { CSSProperties } from "react";
 import type { Skill } from "@/data/skills";
-import { hoverTransition, revealTransition } from "@/lib/motion";
+import { hoverTransition, revealTransition } from "@/components/ui/motion";
 
 // "hidden" / "visible" are triggered by the parent list, which staggers the cards.
 const skillCardVariants: Variants = {
@@ -25,12 +25,12 @@ export function SkillCard({ skill }: SkillCardProps) {
       whileHover={{ y: -4 }}
       transition={hoverTransition}
       style={style}
-      className="group flex items-center gap-3 rounded-card border border-border px-4 py-4 transition-colors duration-200 hover:border-muted"
+      className="skill-card group flex items-center gap-3 rounded-card border border-border px-4 py-4 transition-colors duration-200 hover:border-muted"
     >
       <Icon
         size={22}
         aria-hidden="true"
-        className="shrink-0 text-muted transition-colors duration-200 group-hover:text-(--skill-color)"
+        className="shrink-0 text-muted transition-colors duration-200 group-hover:text-(--skill-hover)"
       />
       <span className="text-sm font-medium">{skill.name}</span>
     </motion.li>

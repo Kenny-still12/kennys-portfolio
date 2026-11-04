@@ -7,7 +7,7 @@ type ButtonProps = {
 };
 
 const base =
-  "inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200";
+  "inline-flex items-center gap-2 rounded-card px-6 py-3 text-sm font-medium transition-colors duration-200";
 
 const variants = {
   primary: "bg-accent text-accent-contrast hover:bg-text hover:text-bg",

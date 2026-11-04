@@ -3,7 +3,7 @@
 import { MotionConfig } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
-import { hoverTransition } from "@/lib/motion";
+import { hoverTransition } from "@/components/ui/motion";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (

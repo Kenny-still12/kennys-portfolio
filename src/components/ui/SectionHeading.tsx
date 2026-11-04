@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { sections, type SectionId } from "@/data/site";
-import { revealTransition } from "@/lib/motion";
+import { revealTransition } from "@/components/ui/motion";
 
 type SectionHeadingProps = {
   section: SectionId;

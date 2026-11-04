@@ -6,7 +6,7 @@ export function About() {
   const [intro, ...paragraphs] = about.bio;
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="container-page py-24 md:py-32">
+    <section id="about" aria-labelledby="about-heading" className="container-page py-16 md:py-24">
       <SectionHeading section="about" />
 
       <div className="mt-12 grid gap-12 md:mt-16 md:grid-cols-12 md:gap-8">

@@ -1,53 +1,41 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { hero, PROFILE_IMAGE, PROFILE_IMAGE_ALT, site } from "@/data/site";
-import { EASE_OUT } from "@/lib/motion";
 
 const nameLines = site.name.split(" ");
-const LINE_STAGGER = 0.12;
+const LINE_STAGGER_MS = 120;
 // Supporting content fades in once the last line of the name has mostly landed.
-const AFTER_NAME = 0.3 + nameLines.length * LINE_STAGGER;
+const AFTER_NAME_MS = 300 + nameLines.length * LINE_STAGGER_MS;
 
-const fadeIn = (delay: number) => ({
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 0.6, delay, ease: EASE_OUT },
-});
+const delay = (ms: number) => ({ animationDelay: `${ms}ms` });
 
 export function Hero() {
   return (
     <section
       id="top"
       aria-labelledby="hero-heading"
-      className="container-page pb-24 pt-16 md:pb-32 md:pt-24"
+      className="container-page flex flex-col justify-center py-16 md:min-h-[calc(100svh-4rem)] md:py-20"
     >
+      <p className="mb-6 animate-fade font-mono text-sm text-muted">{site.role}</p>
+
       <div className="grid gap-12 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-8">
-          <motion.p {...fadeIn(0)} className="font-mono text-sm text-muted">
-            {site.role}
-          </motion.p>
-
-          <h1 id="hero-heading" className="mt-6 text-display">
+          <h1 id="hero-heading" className="text-display">
             {nameLines.map((line, index) => (
               // The mask: overflow-hidden clips each line while it rises into place.
               <span key={line} className="block overflow-hidden pb-[0.08em]">
-                <motion.span
-                  className="block"
-                  initial={{ y: "105%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 + index * LINE_STAGGER, ease: EASE_OUT }}
+                <span
+                  className="block animate-rise motion-reduce:animate-none"
+                  style={delay(100 + index * LINE_STAGGER_MS)}
                 >
                   {line}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h1>
 
-          <motion.div {...fadeIn(AFTER_NAME)} className="mt-10 max-w-xl">
+          <div className="mt-10 max-w-xl animate-fade" style={delay(AFTER_NAME_MS)}>
             <p className="text-lead">{site.tagline}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={hero.primaryCta.href}>
@@ -58,12 +46,12 @@ export function Hero() {
                 {hero.secondaryCta.label}
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          {...fadeIn(AFTER_NAME + 0.1)}
-          className="ml-auto w-2/3 sm:w-1/2 md:col-span-4 md:mt-40 md:w-full"
+        <div
+          className="ml-auto w-2/3 animate-fade sm:w-1/2 md:col-span-4 md:w-full"
+          style={delay(AFTER_NAME_MS + 100)}
         >
           <Image
             src={PROFILE_IMAGE}
@@ -74,7 +62,7 @@ export function Hero() {
             sizes="(min-width: 768px) 30vw, 66vw"
             className="aspect-[4/5] w-full rounded-card border border-border object-cover"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ const listVariants: Variants = {
 
 export function Skills() {
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="container-page py-24 md:py-32">
+    <section id="skills" aria-labelledby="skills-heading" className="container-page py-16 md:py-24">
       <SectionHeading section="skills" />
 
       <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16">

@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="container-page py-24 md:py-32">
+    <section id="projects" aria-labelledby="projects-heading" className="container-page py-16 md:py-24">
       <SectionHeading section="projects" />
 
       <div className="mt-12 flex flex-col gap-4 md:mt-16">

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { projectLinks } from "@/data/site";
-import { revealTransition } from "@/lib/motion";
+import { revealTransition } from "@/components/ui/motion";
 
 type ProjectCardProps = {
   project: Project;
@@ -60,7 +60,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.tech.map((tech, techIndex) => (
             <li
               key={`${tech}-${techIndex}`}
-              className="rounded-full border border-border px-3 py-1 font-mono text-xs text-muted"
+              className="rounded-card border border-border px-3 py-1 font-mono text-xs text-muted"
             >
               {tech}
             </li>

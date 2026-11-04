@@ -30,9 +30,9 @@ export function About() {
           />
           <dl className="mt-8 divide-y divide-border border-y border-border">
             {about.facts.map((fact) => (
-              <div key={fact.label} className="flex items-baseline justify-between gap-4 py-3">
-                <dt className="shrink-0 font-mono text-xs text-muted">{fact.label}</dt>
-                <dd className="text-right text-sm">{fact.value}</dd>
+              <div key={fact.label} className="grid gap-1 py-3">
+                <dt className="font-mono text-xs text-muted">{fact.label}</dt>
+                <dd className="text-sm leading-snug">{fact.value}</dd>
               </div>
             ))}
           </dl>

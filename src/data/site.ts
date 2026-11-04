@@ -4,10 +4,10 @@ import { SiGithub } from "react-icons/si";
 
 export const site = {
   name: "Kenneth Sonoda",
-  role: "[Your role, e.g. IT student focused on web development and design]",
-  tagline: "[Your one-line tagline]",
-  description: "[One or two sentences describing who you are and what you build]",
-  email: "[your.email@example.com]",
+  role: "IT Student, Web Developer, Software Engineer to be",
+  tagline: "Providing solutions to problems through technology and perseverance",
+  description: "I am an IT student at King's Own Institute, taking a BS in Information Technology, I am currently learning about web development and software engineering, and I am looking for a job opportunity in 2026 - 2027.",
+  email: "kensonoda1124@gmail.com",
   // Vercel sets this env var on deploy; locally the site runs on localhost.
   url: process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
@@ -38,7 +38,7 @@ export type Social = {
 export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/Kenny-still12", icon: SiGithub },
   // LinkedIn's logo isn't in Simple Icons, so it comes from the Font Awesome set.
-  { label: "LinkedIn", href: "[Your LinkedIn URL]", icon: FaLinkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kenneth-sonoda-010187365/", icon: FaLinkedin },
 ];
 
 export const PROFILE_IMAGE = "/images/profile-placeholder.svg";
@@ -56,15 +56,15 @@ export const hero = {
 export const about = {
   // The first paragraph is shown larger as an intro; the rest render as body text.
   bio: [
-    "[Intro: one or two sentences on who you are and what you're working towards.]",
-    "[A paragraph about what you study or build, and the kind of work you enjoy.]",
-    "[Optional: something outside of code that says something about you.]",
+    "I am an IT student at King's Own Institute, taking a BS in Information Technology, I am currently learning about web development and software engineering, and I am currently working on a project that tailors to the problem of international students.",
+    "I am a quick learner and I am always looking for new challenges and opportunities to grow, I am also a team player and I am always looking for ways to help my team succeed.",
+    "I am always willing to do a job that nobody else wants to do, and I am always looking for ways to improve myself and my skills.",
   ],
   facts: [
-    { label: "Based in", value: "[City, Country]" },
-    { label: "Studying", value: "[Degree, University]" },
-    { label: "Focus", value: "[e.g. Web development and design]" },
-    { label: "Currently", value: "[What you're learning or working on]" },
+    { label: "Based in", value: "Sydney, Australia" },
+    { label: "Studying", value: "BS in Information Technology, King's Own Institute" },
+    { label: "Focus", value: "Web development and software engineering" },
+    { label: "Currently", value: "Working on a project that tailors to the problem of international students" },
   ],
 };
 
@@ -88,7 +88,7 @@ export const projectLinks = {
 };
 
 export const contact = {
-  intro: "[A sentence or two on what you'd like to hear about, e.g. internships, collaborations, or just a hello.]",
+  intro: "I am willing to work on any project that is related to web development and software engineering, and I am always looking for new challenges and opportunities to grow, feel free to contact me if you have any questions or opportunities.",
   emailLabel: "Email",
   elsewhereLabel: "Elsewhere",
 };

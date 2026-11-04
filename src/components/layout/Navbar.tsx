@@ -78,7 +78,7 @@ export function Navbar() {
       <nav aria-label="Main" className="container-page flex h-16 items-center justify-between">
         <a
           href="#top"
-          className="text-sm font-extrabold tracking-tight transition-colors duration-200 hover:text-accent"
+          className="py-2 text-sm font-extrabold tracking-tight transition-colors duration-200 hover:text-accent"
         >
           {site.name}
         </a>

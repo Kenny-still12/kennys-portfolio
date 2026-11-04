@@ -23,7 +23,7 @@ function ProjectLink({ href, label, projectTitle }: ProjectLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 transition-colors duration-200 hover:text-accent"
+      className="inline-flex items-center gap-1 py-1 transition-colors duration-200 hover:text-accent"
     >
       {label}
       <span className="sr-only">: {projectTitle}</span>

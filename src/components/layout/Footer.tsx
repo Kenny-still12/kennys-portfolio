@@ -20,7 +20,7 @@ export async function Footer() {
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
-                    className="text-muted transition-colors duration-200 hover:text-accent"
+                    className="inline-block py-1 text-muted transition-colors duration-200 hover:text-accent"
                   >
                     {section.label}
                   </a>
@@ -55,7 +55,7 @@ export async function Footer() {
           </p>
           <a
             href="#top"
-            className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-accent"
+            className="inline-flex items-center gap-2 py-1 transition-colors duration-200 hover:text-accent"
           >
             {footer.backToTop}
             <ArrowUp size={14} aria-hidden="true" />

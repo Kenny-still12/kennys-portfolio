@@ -2,6 +2,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { contact, site, socials } from "@/data/site";
 
 export function Contact() {
+  const [emailUser, emailDomain] = site.email.split("@");
+
   return (
     // `inverted` swaps to the opposite theme's palette, so the page ends on a contrasting block.
     <section id="contact" aria-labelledby="contact-heading" className="inverted bg-bg text-text">
@@ -17,7 +19,9 @@ export function Contact() {
               href={`mailto:${site.email}`}
               className="mt-3 inline-block text-title underline decoration-border decoration-2 underline-offset-8 transition-colors duration-200 [overflow-wrap:anywhere] hover:text-accent hover:decoration-accent"
             >
-              {site.email}
+              {/* On narrow screens, wrap after the @ rather than mid-word. */}
+              {emailUser}@<wbr />
+              {emailDomain}
             </a>
 
             <p className="mt-12 font-mono text-xs text-muted">{contact.elsewhereLabel}</p>

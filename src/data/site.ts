@@ -6,3 +6,17 @@ export const site = {
 };
 
 export const PROFILE_IMAGE = "/images/profile-placeholder.svg";
+
+// Order here is the order on the page. `label` is the navbar text, `title` the section heading.
+export const sections = [
+  { id: "about", label: "About", title: "About" },
+  { id: "skills", label: "Skills", title: "Skills" },
+  { id: "projects", label: "Projects", title: "Projects" },
+  { id: "contact", label: "Contact", title: "Get in touch" },
+] as const;
+
+export type SectionId = (typeof sections)[number]["id"];
+
+export const footer = {
+  backToTop: "Back to top",
+};

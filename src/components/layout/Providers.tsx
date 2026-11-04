@@ -3,6 +3,7 @@
 import { MotionConfig } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
+import { hoverTransition } from "@/lib/motion";
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -12,10 +13,7 @@ export function Providers({ children }: { children: ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <MotionConfig
-        reducedMotion="user"
-        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-      >
+      <MotionConfig reducedMotion="user" transition={hoverTransition}>
         {children}
       </MotionConfig>
     </ThemeProvider>

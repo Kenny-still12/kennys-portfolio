@@ -25,6 +25,7 @@ export function About() {
             alt={ABOUT_IMAGE_ALT}
             width={400}
             height={500}
+            quality={90}
             sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, 50vw"
             className="aspect-[4/5] w-1/2 rounded-card border border-border object-cover md:w-full"
           />

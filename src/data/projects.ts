@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "Search any city for its current conditions, temperature, wind, humidity, pressure, and visibility, powered by the OpenWeatherMap API.",
     tech: ["React", "Vite", "Tailwind CSS", "OpenWeatherMap API"],
     year: "2026",
-    // [TODO] add liveUrl once it's deployed
+    liveUrl: "https://weather-app-henna-sigma-43.vercel.app",
     repoUrl: "https://github.com/Kenny-still12/weather-app",
   },
 ];

@@ -19,7 +19,14 @@ export const site = {
 // browser's theme-color. Keep these in sync with the tokens in globals.css.
 export const themeColors = {
   light: { bg: "#f5f1ea", text: "#1a1816", muted: "#6b635a", border: "#d9d1c2", accent: "#a44224" },
-  dark: { bg: "#090e1a" },
+  dark: { bg: "#090e1a", surface: "#111a2e", accent: "#5b8ed9" },
+};
+
+// Hex scales for the contribution calendar (SVG fills can't use CSS variables).
+// Each array is [empty day, peak intensity]; the library interpolates the middle levels.
+export const activityCalendarTheme = {
+  light: [themeColors.light.border, themeColors.light.accent],
+  dark: [themeColors.dark.surface, themeColors.dark.accent],
 };
 
 export const notFound = {
@@ -72,9 +79,21 @@ export const about = {
 export const sections = [
   { id: "about", label: "About", title: "About" },
   { id: "skills", label: "Skills", title: "Skills" },
+  { id: "activity", label: "Shipping log", title: "Shipping log" },
   { id: "projects", label: "Projects", title: "Projects" },
   { id: "contact", label: "Contact", title: "Get in touch" },
 ] as const;
+
+export const activity = {
+  username: "Kenny-still12",
+  intro: "A year of public commits, mapped the way GitHub does — some weeks dense, some quiet. Hover a day to peek.",
+  totalCaption: "contributions in the last year",
+  // Placeholders: {{count}} and {{date}} (YYYY-MM-DD).
+  tooltipLabel: "{{count}} on {{date}}",
+  errorMessage: "Couldn't load GitHub activity right now.",
+  profileLabel: "View on GitHub",
+  profileHref: "https://github.com/Kenny-still12",
+};
 
 export type SectionId = (typeof sections)[number]["id"];
 

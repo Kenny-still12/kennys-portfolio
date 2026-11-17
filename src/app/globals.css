@@ -69,7 +69,6 @@
   --animate-trace: trace 1s var(--ease-reveal) both;
   --animate-wipe: wipe 0.8s var(--ease-reveal) both;
   --animate-pop: pop 0.4s var(--ease-reveal) both;
-
   /* Hero background: grid lines grow downward, outlines trace or wipe in, the accent mark pops. */
   @keyframes draw-down {
     from {

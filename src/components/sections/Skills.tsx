@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import { LogoLoop, type LogoLoopItem } from "@/components/ui/LogoLoop";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SkillCard } from "@/components/ui/SkillCard";
 import { skills, type Skill, type SkillCategory } from "@/data/skills";
@@ -11,6 +12,16 @@ const groups = skills.reduce((map, skill) => {
   return map;
 }, new Map<SkillCategory, Skill[]>());
 
+const marqueeItems: LogoLoopItem[] = skills.map(({ name, icon: Icon }) => ({
+  key: name,
+  node: (
+    <span className="flex items-center gap-3 font-mono text-sm text-muted">
+      <Icon size={28} />
+      {name}
+    </span>
+  ),
+}));
+
 const listVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.05 } },
@@ -20,6 +31,10 @@ export function Skills() {
   return (
     <section id="skills" aria-labelledby="skills-heading" className="container-page py-16 md:py-24">
       <SectionHeading section="skills" />
+
+      <div className="mt-12 border-y border-border py-6 md:mt-16">
+        <LogoLoop items={marqueeItems} />
+      </div>
 
       <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16">
         {[...groups].map(([category, items]) => (
